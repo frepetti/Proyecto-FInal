@@ -1,0 +1,71 @@
+@import "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css";
+$c-item:  #05a4e5;
+
+
+
+@mixin crear-circulo($tamano, $color){
+	background-color: $color;
+	height: $tamano;
+	width: $tamano;
+	border-radius: 50%;
+}
+header {
+	background-size: cover;
+	background-image: url("../assets/back_header.jpg");
+	background-repeat: no-repeat;
+	.navbar-default{
+		background-color: transparent;
+		background-image: none;
+		.navbar-nav{
+			li{
+				a{
+					color: white;
+				}
+			}
+		}	
+		.container-fluid{
+			.iconos{
+				ul{
+					display: flex;
+					li{
+						margin: 5px;
+						list-style: none;
+						@include crear-circulo(40px, white);
+						&:hover{
+							background-color:$c-item;
+							a{
+								color: #fff;
+							}
+						}
+						a{
+							font-size: 20px;
+							.glyphicon{
+								top: 8px;
+							}
+							
+						}
+					}
+				}
+			}
+		}
+	}
+	.caratula{
+		h1{
+			text-transform: uppercase;
+			color: #fff;
+			font-weight: bold;
+			font-size: 100px;
+			padding: 120px 0;
+		}
+	}
+}
+.features{
+	.container{
+		.minifotos{
+			.col-md-1{
+				width: 12.83%;
+				border: none
+			}
+		}
+	}
+}
